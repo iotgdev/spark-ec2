@@ -3,8 +3,8 @@
 pushd /root > /dev/null
 
 if [ -d "spark" ]; then
-  echo "Spark seems to be installed. Exiting."
-  return
+  echo "Spark seems to be installed. Overwriting it..."
+  rm -r spark
 fi
 
 # Github tag:
@@ -122,6 +122,11 @@ else
         wget http://s3.amazonaws.com/spark-related-packages/spark-1.2.1-bin-cdh4.tgz
       else
         wget http://s3.amazonaws.com/spark-related-packages/spark-1.2.1-bin-hadoop2.4.tgz
+      fi
+      ;;
+    2.1.1)
+      if [[ "$HADOOP_MAJOR_VERSION" == "2" ]]; then
+        wget http://s3.amazonaws.com/spark-related-packages/spark-2.1.1-bin-hadoop2.7.tgz
       fi
       ;;
     *)
