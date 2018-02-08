@@ -3,8 +3,8 @@
 pushd /root > /dev/null
 
 if [ -d "scala" ]; then
-  echo "Scala seems to be installed. Exiting."
-  return 0
+  echo "Scala seems to be installed. Overwriting it..."
+  rm -r scala
 fi
 
 SCALA_VERSION="2.10.3"
