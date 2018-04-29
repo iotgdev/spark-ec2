@@ -54,7 +54,7 @@ else:
 SPARK_EC2_VERSION = "2.0.0"
 SPARK_EC2_DIR = os.path.dirname(os.path.realpath(__file__))
 
-VALID_SPARK_VERSIONS = set([
+VALID_SPARK_VERSIONS = {
     "0.7.3",
     "0.8.0",
     "0.8.1",
@@ -84,8 +84,9 @@ VALID_SPARK_VERSIONS = set([
     "2.0.1",
     "2.0.2",
     "2.1.0",
+    "2.1.1",
     "2.1.2"
-])
+}
 
 SPARK_TACHYON_MAP = {
     "1.0.0": "0.4.1",

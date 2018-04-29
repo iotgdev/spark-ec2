@@ -124,6 +124,11 @@ else
         wget http://s3.amazonaws.com/spark-related-packages/spark-1.2.1-bin-hadoop2.4.tgz
       fi
       ;;
+    2.1.1)
+      if [[ "$HADOOP_MAJOR_VERSION" == "2" ]]; then
+        wget http://s3.amazonaws.com/spark-related-packages/spark-2.1.1-bin-hadoop2.7.tgz
+      fi
+      ;;
     2.1.2)
       if [[ "$HADOOP_MAJOR_VERSION" == "2" ]]; then
         wget http://www.mirrorservice.org/sites/ftp.apache.org/spark/spark-2.1.2/spark-2.1.2-bin-hadoop2.7.tgz
