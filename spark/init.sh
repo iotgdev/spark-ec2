@@ -131,7 +131,7 @@ else
       ;;
     2.1.2)
       if [[ "$HADOOP_MAJOR_VERSION" == "2" ]]; then
-        wget http://www.mirrorservice.org/sites/ftp.apache.org/spark/spark-2.1.2/spark-2.1.2-bin-hadoop2.7.tgz
+        wget https://archive.apache.org/dist/spark/spark-2.1.2/spark-2.1.2-bin-hadoop2.7.tgz
       fi
       ;;
     *)
